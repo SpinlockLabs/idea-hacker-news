@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<idea-plugin>
+  <id>sh.spinlock.idea.hackernews</id>
+  <name>Hacker News</name>
+  <version>1.0</version>
+  <vendor email="kaendfinger@gmail.com" url="https://github.com/SpinlockLabs">Spinlock Labs</vendor>
+
+  <description><![CDATA[
+      Allows you to browse Hacker News from inside your IDE.<br>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      Initial plugin release, adds the Top Stories on Hacker News action.
+    ]]>
+  </change-notes>
+
+  <idea-version since-build="193.0"/>
+
+  <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+  </extensions>
+
+  <actions>
+    <group
+      id="sh.spinlock.idea.hackernews.HackerNewsActionGroup"
+      text="Hacker News"
+      popup="true">
+      <action
+        id="sh.spinlock.idea.hackernews.TopStoriesAction"
+        class="sh.spinlock.idea.hackernews.TopStoriesAction"
+        text="Top Stories on Hacker News">
+      </action>
+
+      <add-to-group group-id="ToolsMenu" anchor="first"/>
+    </group>
+  </actions>
+</idea-plugin>
