@@ -45,10 +45,10 @@ public class HackerNewsClient {
         .map(
             (pair) -> {
               HackerNewsItem item = HackerNewsClient.getItem(pair.getSecond());
-              item.rankInList = pair.first;
+              item.indexInList = pair.first;
               return item;
             })
-        .sorted(Comparator.comparingInt((item) -> item.rankInList))
+        .sorted(Comparator.comparingInt((item) -> item.indexInList))
         .collect(Collectors.toList());
   }
 

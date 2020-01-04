@@ -16,7 +16,7 @@ public class ItemPopupStep extends BaseListPopupStep<HackerNewsItem> {
   @NotNull
   @Override
   public String getTextFor(HackerNewsItem value) {
-    return value.rankInList + ". " + value.title;
+    return value.indexInList + ". " + value.title;
   }
 
   @Nullable
