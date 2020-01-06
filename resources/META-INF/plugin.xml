@@ -19,6 +19,16 @@
   <depends>com.intellij.modules.platform</depends>
 
   <extensions defaultExtensionNs="com.intellij">
+    <applicationConfigurable
+      instance="sh.spinlock.idea.hackernews.GlobalConfigurationExtension"
+      id="preferences.sh.spinlock.idea.hackernews.global"
+      displayName="Hacker News"
+      groupId="tools"
+    />
+
+    <applicationService
+      serviceImplementation="sh.spinlock.idea.hackernews.Configuration"
+    />
   </extensions>
 
   <actions>

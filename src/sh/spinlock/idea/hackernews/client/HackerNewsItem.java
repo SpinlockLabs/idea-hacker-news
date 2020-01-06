@@ -2,6 +2,7 @@ package sh.spinlock.idea.hackernews.client;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import org.jetbrains.annotations.NotNull;
 
 public class HackerNewsItem {
   public int indexInList;
@@ -25,4 +26,14 @@ public class HackerNewsItem {
   @JsonProperty public String type;
 
   @JsonProperty public String url;
+
+  @NotNull
+  public String getItemUrl() {
+    return String.format("https://news.ycombinator.com/item?id=%s", id);
+  }
+
+  @NotNull
+  public String getAnyUrl() {
+    return url == null ? getItemUrl() : url;
+  }
 }
