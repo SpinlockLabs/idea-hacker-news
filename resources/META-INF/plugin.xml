@@ -2,7 +2,7 @@
 <idea-plugin>
   <id>sh.spinlock.idea.hackernews</id>
   <name>Hacker News</name>
-  <version>1.1</version>
+  <version>1.2</version>
   <vendor email="kaendfinger@gmail.com" url="https://github.com/kendfinger">Kenneth Endfinger</vendor>
 
   <description><![CDATA[
@@ -10,7 +10,7 @@
     ]]></description>
 
   <change-notes><![CDATA[
-      Add a plugin icon.
+      Update the plugin icon to not have rounded corners.
     ]]>
   </change-notes>
 

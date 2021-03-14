@@ -37,10 +37,11 @@ public class HackerNewsClient {
 
   @NotNull
   public static List<HackerNewsItem> loadTopStories(int limit) {
-    AtomicInteger count = new AtomicInteger(0);
-    return HackerNewsClient.getTopStories().stream()
+    List<Integer> stories = HackerNewsClient.getTopStories();
+
+    return stories.stream()
         .limit(limit)
-        .map((id) -> new Pair<>(count.addAndGet(1), id))
+        .map((id) -> new Pair<>(stories.indexOf(id) + 1, id))
         .parallel()
         .map(
             (pair) -> {
