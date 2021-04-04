@@ -25,7 +25,7 @@ jobs:
     # Publish the plugin to the Marketplace
     - name: Publish Plugin
       env:
-        PUBLISH_TOKEN: ${{ secrets.JETBRAINS_PUBLISH_TOKEN }}
+        JETBRAINS_PUBLISH_TOKEN: ${{ secrets.JETBRAINS_PUBLISH_TOKEN }}
       run: ./gradlew publishPlugin
 
   # Patch changelog, commit and push to the current repository
