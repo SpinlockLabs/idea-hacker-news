@@ -51,14 +51,14 @@ jobs:
       run: ./gradlew patchChangelog
 
     # Commit patched Changelog
-    - name: Commit files
+    - name: Commit Files
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git commit -m "Update Changelog" -a
 
     # Push changes
-    - name: Push changes
+    - name: Push Changes
       uses: ad-m/github-push-action@master
       with:
         branch: main

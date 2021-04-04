@@ -2,8 +2,6 @@
 
 ## [Unreleased]
 
-## [1.3.0]
-
 ### Added
 
 - Switched to standard JetBrains Gradle based plugin architecture.
