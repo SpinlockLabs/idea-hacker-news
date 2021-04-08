@@ -40,6 +40,7 @@ public class Configuration implements PersistentStateComponent<Configuration.Sta
   }
 
   public static class State {
+
     public Integer itemLimit = 30;
     public String itemTextFormat = "{index}. {title}";
   }

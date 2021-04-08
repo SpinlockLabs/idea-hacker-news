@@ -25,12 +25,16 @@ public class ItemPopupStep extends BaseListPopupStep<HackerNewsItem> {
   public String getTextFor(HackerNewsItem value) {
     return configuration
         .getItemTextFormat()
+        .replace("{id}", Integer.toString(value.id))
         .replace("{index}", Integer.toString(value.indexInList))
         .replace("{score}", Integer.toString(value.score))
         .replace("{title}", value.title == null ? "" : value.title)
+        .replace("{text}", value.text == null ? "" : value.text)
+        .replace("{by}", value.by == null ? "" : value.by)
         .replace("{url}", value.getAnyUrl())
         .replace("{attached-url}", value.url == null ? "" : value.url)
-        .replace("{item-url}", value.getItemUrl());
+        .replace("{item-url}", value.getItemUrl())
+        .replace("{newline}", "\n");
   }
 
   @Nullable

@@ -14,7 +14,6 @@ import javax.swing.JComponent;
 import javax.swing.JPanel;
 
 public class ConfigurationExtensionUI {
-
   public JPanel panel;
   public ComboBox<Integer> itemLimitSelector;
   public JBTextField itemTextFormat;

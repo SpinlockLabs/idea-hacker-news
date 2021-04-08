@@ -13,7 +13,8 @@ public class TopStoriesAction extends HackerNewsAction {
   public void actionPerformed(@NotNull AnActionEvent anActionEvent) {
     Configuration configuration = getCurrentConfiguration();
 
-    List<HackerNewsItem> items = HackerNewsClient.loadTopStories(configuration.getItemLimit());
+    List<HackerNewsItem> items =
+        HackerNewsClient.shared().loadTopStories(configuration.getItemLimit());
 
     ListPopup popup =
         JBPopupFactory.getInstance()
