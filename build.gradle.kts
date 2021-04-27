@@ -7,7 +7,7 @@ plugins {
 
   id("com.diffplug.spotless") version "5.12.2"
   id("org.jetbrains.changelog") version "1.1.2"
-  id("org.jetbrains.intellij") version "0.7.2"
+  id("org.jetbrains.intellij") version "0.7.3"
 }
 
 repositories {
